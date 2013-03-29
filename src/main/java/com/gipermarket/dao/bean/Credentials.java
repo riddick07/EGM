@@ -5,11 +5,12 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Credentials", catalog = "egipermarket")
+@Table(name = "сredentials", catalog = "egipermarket")
 public class Credentials implements Serializable {
 
 	/**
@@ -18,10 +19,10 @@ public class Credentials implements Serializable {
 	private static final long serialVersionUID = -4138051911273250798L;
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
-	@Column(name = "name")
+	@Column(name = "userId")
 	private Long userId;
 	
 	@Column(name = "login")
@@ -29,13 +30,18 @@ public class Credentials implements Serializable {
 	
 	@Column(name = "password")
 	private String password;
+	
+	public Credentials(Long userId, String login, String password) {
+		super();
+		this.userId = userId;
+		this.login = login;
+		this.password = password;
+	}
+	public Credentials() {
+	}
 
 	public Long getId() {
 		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public Long getUserId() {

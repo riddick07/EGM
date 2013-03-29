@@ -45,7 +45,6 @@ public abstract class GeneralController extends AbstractController {
 		}
 
 		processRequest.addObject("user", sessionHelper.getUserSession().getLogin());
-
 		return processRequest;
 	}
 
@@ -58,9 +57,9 @@ public abstract class GeneralController extends AbstractController {
 	 * @param url
 	 *            , @param password, @param username is set parameters
 	 */
-	protected void setSessionAttributes(HttpSession session, String url, String password, String username) {
+	protected void setSessionAttributes(HttpSession session, String password, String username) {
 		assert session != null;
-		new SessionHelper(session).create(username, password, url);
+		new SessionHelper(session).create(username, password);
 	}
 
 	/**

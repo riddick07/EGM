@@ -6,7 +6,6 @@ public class UserSession implements Serializable {
 	private static final long serialVersionUID = 7788535791309788330L;
 	private String login;
 	private String password;
-	private String url;
 
 	public UserSession() {
 	}
@@ -32,13 +31,4 @@ public class UserSession implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
-	public String getUrl() {
-		return url;
-	}
-
-	public void setUrl(String url) {
-		this.url = url;
-	}
-
 }

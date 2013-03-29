@@ -6,7 +6,9 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -25,7 +27,7 @@ public class User implements Serializable {
 	private static final long serialVersionUID = 2362458665207591424L;
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
 	@Column(name = "name")
@@ -33,6 +35,9 @@ public class User implements Serializable {
 
 	@Column(name = "surname")
 	private String surname;
+	
+	@OneToOne
+	private Credentials credentials;
 
 	@Column(name = "mail")
 	private String mail;
@@ -43,21 +48,24 @@ public class User implements Serializable {
 	@Column(name = "registrationDate")
 	private Date registrationDate;
 
-	public User(Long id, String name, String surname, String mail, String phone) {
-		this.id = id;
+	public User(String name, String surname, String mail, String phone) {
 		this.name = name;
 		this.surname = surname;
 		this.mail = mail;
 		this.phone = phone;
 		this.registrationDate = new Date(System.currentTimeMillis());
 	}
+	
+	public Credentials getCredentials() {
+		return credentials;
+	}
+
+	public void setCredentials(Credentials credentials) {
+		this.credentials = credentials;
+	}
 
 	public Long getId() {
 		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public Date getRegistrationDate() {

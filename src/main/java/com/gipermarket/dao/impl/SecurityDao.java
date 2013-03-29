@@ -22,7 +22,7 @@ import com.gipermarket.util.HibernateUtil;
 public class SecurityDao implements Serializable {
 
 	private static final Logger log = Logger.getLogger(SecurityDao.class.getName());
-	
+
 	/**
 	 * 
 	 */
@@ -44,9 +44,9 @@ public class SecurityDao implements Serializable {
 			transaction = session.beginTransaction();
 			allCredentials = session.createQuery("FROM Credentials").list();
 			transaction.commit();
-			
+
 		} catch (HibernateException e) {
-			log.info("Selecte all credentials exception: " + e);
+			log.info("Select all credentials method exception: " + e);
 		}
 		return allCredentials;
 	}
@@ -67,6 +67,29 @@ public class SecurityDao implements Serializable {
 	}
 
 	/**
+	 * Get credentials by login
+	 * 
+	 * @param id
+	 * @return Credentials
+	 */
+	@SuppressWarnings("unchecked")
+	public List<Credentials> getCredentialsByLogin(String login) {
+		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+		Session session = sessionFactory.openSession();
+		List<Credentials> credentials = new ArrayList<Credentials>();
+		Transaction transaction = null;
+		try {
+			transaction = session.beginTransaction();
+			credentials = session.createQuery("FROM credentials where login = '" + login + "'").list();
+			transaction.commit();
+
+		} catch (HibernateException e) {
+			log.info("Select all credentials method exception: " + e);
+		}
+		return credentials;
+	}
+
+	/**
 	 * Save credentials
 	 * 
 	 * @param credentials
@@ -76,8 +99,7 @@ public class SecurityDao implements Serializable {
 		SessionFactory sf = HibernateUtil.getSessionFactory();
 		Session session = sf.openSession();
 		session.beginTransaction();
-		Long id = (Long) session.save(credentials);
-		credentials.setId(id);
+		session.save(credentials);
 
 		session.getTransaction().commit();
 		session.close();
@@ -116,4 +138,14 @@ public class SecurityDao implements Serializable {
 		session.close();
 	}
 
+	public static void main(String[] args) {
+		SecurityDao dao = new SecurityDao();
+		Credentials credentials = new Credentials(2l, "dk", "passwd");
+
+		List<Credentials> credentialsByLogin = dao.credentialsList();
+
+		if (credentialsByLogin != null && !credentialsByLogin.isEmpty()) {
+			System.out.println(credentialsByLogin.get(0).getPassword());
+		}
+	}
 }

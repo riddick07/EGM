@@ -25,7 +25,7 @@ public class SessionHelper {
 	 * @param password
 	 * @param url
 	 */
-	public void create(String userName, String password, String url) {
+	public void create(String userName, String password) {
 		if (session == null) {
 			String msg = MessageUtil.getMessage("message.sessionNotCreated");
 			log.severe("HTTP session isn't created");
@@ -33,8 +33,6 @@ public class SessionHelper {
 		}
 
 		UserSession us = new UserSession(userName, password);
-		us.setUrl(url);
-
 		session.setAttribute(USER_SESSION_ATTRIBUTE_NAME, us);
 	}
 

@@ -11,7 +11,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
 
-import com.gipermarket.domain.AppSettings;
 import com.gipermarket.util.Dispatcher;
 import com.gipermarket.util.MessageUtil;
 import com.gipermarket.util.SessionHelper;
@@ -44,22 +43,18 @@ public class LoginController extends AbstractController {
 
 		if (String.valueOf(Boolean.TRUE).equals(request.getParameter(PageParametersEnum.logout.name()))) {
 			sessionHelper.destroy();
-			if (!AppSettings.getInstance().isProductionMode()) {
-
-			}
-
 			return new ModelAndView(PageParametersEnum.Login.name());
 		}
 
-		String url = AppSettings.getInstance().getUrl();
 		if (!sessionHelper.isValid()) {
 			/** User name and password from parameter request **/
 			String requestUsername = request.getParameter(PageParametersEnum.login.name());
 			String requestPassword = request.getParameter(PageParametersEnum.password.name());
+			
 			if (requestUsername != null && requestPassword != null) {
 				boolean valid = true;// TODO:Create validation
 				if (valid) {
-					sessionHelper.create(requestUsername, requestPassword, url);
+					sessionHelper.create(requestUsername, requestPassword);
 					return Dispatcher.redirectHomePage();
 				} else {
 					sessionHelper.destroy();

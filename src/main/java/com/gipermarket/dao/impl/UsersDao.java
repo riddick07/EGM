@@ -59,8 +59,7 @@ public class UsersDao {
 		SessionFactory sf = HibernateUtil.getSessionFactory();
 		Session session = sf.openSession();
 		session.beginTransaction();
-		Long id = (Long) session.save(user);
-		user.setId(id);
+		session.save(user);
 
 		session.getTransaction().commit();
 		session.close();
@@ -97,5 +96,13 @@ public class UsersDao {
 		session.delete(user);
 		session.getTransaction().commit();
 		session.close();
+	}
+
+	public static void main(String[] args) {
+		UsersDao dao = new UsersDao();
+
+		User user = new User("D", "K", "dk2@gmail.com", "+38 093");
+		dao.insertUser(user);
+
 	}
 }
