@@ -1,7 +1,10 @@
 package com.gipermarket.dao.impl;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -17,6 +20,8 @@ import com.gipermarket.util.HibernateUtil;
  */
 public class UsersDao {
 
+	private static final Logger log = Logger.getLogger(UsersDao.class.getName());
+
 	/**
 	 * Select list of users
 	 * 
@@ -25,12 +30,15 @@ public class UsersDao {
 	@SuppressWarnings("unchecked")
 	public List<User> usersList() {
 
-		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-		Session session = sessionFactory.openSession();
-		Transaction transaction = null;
-		transaction = session.beginTransaction();
-		List<User> users = session.createQuery("FROM Users").list();
-		transaction.commit();
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		List<User> users = new ArrayList<User>();
+		try {
+			Transaction transaction = session.beginTransaction();
+			users = session.createQuery("FROM User").list();
+			transaction.commit();
+		} catch (HibernateException e) {
+			log.info("Select all credentials method exception: " + e);
+		}
 		return users;
 	}
 
@@ -96,13 +104,5 @@ public class UsersDao {
 		session.delete(user);
 		session.getTransaction().commit();
 		session.close();
-	}
-
-	public static void main(String[] args) {
-		UsersDao dao = new UsersDao();
-
-		User user = new User("D", "K", "dk2@gmail.com", "+38 093");
-		dao.insertUser(user);
-
 	}
 }

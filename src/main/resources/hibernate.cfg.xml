@@ -13,6 +13,7 @@
 
 		<!-- JDBC connection pool (use the built-in) -->
 		<property name="connection.pool_size">1</property>
+		<property name="batch_size">30</property>
 
 		<!-- SQL dialect -->
 		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
@@ -25,8 +26,10 @@
 
 		<!-- Echo all executed SQL to stdout -->
 		<property name="show_sql">true</property>
-
+		<property name="format_sql">true</property>
 		<property name="hbm2ddl.auto">update</property>
+
+		<!-- Mappers -->
 		<mapping class="com.gipermarket.dao.bean.User" />
 		<mapping class="com.gipermarket.dao.bean.Credentials" />
 

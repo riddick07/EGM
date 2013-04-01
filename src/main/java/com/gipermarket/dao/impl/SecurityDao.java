@@ -36,19 +36,17 @@ public class SecurityDao implements Serializable {
 	@SuppressWarnings("unchecked")
 	public List<Credentials> credentialsList() {
 
-		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-		Session session = sessionFactory.openSession();
-		List<Credentials> allCredentials = new ArrayList<Credentials>();
-		Transaction transaction = null;
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		List<Credentials> credentials = new ArrayList<Credentials>();
 		try {
-			transaction = session.beginTransaction();
-			allCredentials = session.createQuery("FROM Credentials").list();
+			Transaction transaction = session.beginTransaction();
+			credentials = session.createQuery("FROM Credentials").list();
 			transaction.commit();
-
 		} catch (HibernateException e) {
 			log.info("Select all credentials method exception: " + e);
 		}
-		return allCredentials;
+
+		return credentials;
 	}
 
 	/**
@@ -136,16 +134,5 @@ public class SecurityDao implements Serializable {
 		session.delete(credentials);
 		session.getTransaction().commit();
 		session.close();
-	}
-
-	public static void main(String[] args) {
-		SecurityDao dao = new SecurityDao();
-		Credentials credentials = new Credentials(2l, "dk", "passwd");
-
-		List<Credentials> credentialsByLogin = dao.credentialsList();
-
-		if (credentialsByLogin != null && !credentialsByLogin.isEmpty()) {
-			System.out.println(credentialsByLogin.get(0).getPassword());
-		}
 	}
 }
