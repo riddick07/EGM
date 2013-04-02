@@ -1,8 +1,6 @@
 package com.gipermarket.view.controller;
 
 
-import java.util.logging.Logger;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -11,8 +9,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
 
+import com.gipermarket.services.api.ISecurityService;
+import com.gipermarket.services.bean.dto.SecurityValidationDto;
+import com.gipermarket.services.impl.SecurityServiceImpl;
 import com.gipermarket.util.Dispatcher;
-import com.gipermarket.util.MessageUtil;
 import com.gipermarket.util.SessionHelper;
 import com.gipermarket.view.controller.enums.PageParametersEnum;
 
@@ -25,8 +25,7 @@ import com.gipermarket.view.controller.enums.PageParametersEnum;
 @Controller
 public class LoginController extends AbstractController {
 	
-	//TODO: Add checkers for logging
-	private static final Logger log = Logger.getLogger(LoginController.class.getName());
+	private ISecurityService securityService = new SecurityServiceImpl();
 
 	/**
 	 * Controller for returned Login page and validating credentials
@@ -52,13 +51,14 @@ public class LoginController extends AbstractController {
 			String requestPassword = request.getParameter(PageParametersEnum.password.name());
 			
 			if (requestUsername != null && requestPassword != null) {
-				boolean valid = true;// TODO:Create validation
+				SecurityValidationDto dto = securityService.validateCredentials(requestUsername, requestPassword);
+				boolean valid = dto.getIsValid();
 				if (valid) {
 					sessionHelper.create(requestUsername, requestPassword);
 					return Dispatcher.redirectHomePage();
 				} else {
 					sessionHelper.destroy();
-					return Dispatcher.loginPage(MessageUtil.getMessage("message.wrongCredentials"));
+					return Dispatcher.loginPage(dto.getMessage());
 				}
 			}
 		} else {

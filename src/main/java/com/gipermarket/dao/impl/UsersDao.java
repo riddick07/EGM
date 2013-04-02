@@ -9,16 +9,17 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import com.gipermarket.dao.api.IUserDao;
 import com.gipermarket.dao.bean.User;
 import com.gipermarket.util.HibernateUtil;
 
 /**
- * DAO class for Table Users
+ * DAO class for Table User
  * 
  * @author DO\dmitry.karpenko
  * 
  */
-public class UsersDao {
+public class UsersDao implements IUserDao{
 
 	private static final Logger log = Logger.getLogger(UsersDao.class.getName());
 

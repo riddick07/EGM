@@ -1,6 +1,5 @@
 package com.gipermarket.dao.impl;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -10,6 +9,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import com.gipermarket.dao.api.ISecurityDao;
 import com.gipermarket.dao.bean.Credentials;
 import com.gipermarket.util.HibernateUtil;
 
@@ -19,17 +19,12 @@ import com.gipermarket.util.HibernateUtil;
  * @author DO\dmitry.karpenko
  * 
  */
-public class SecurityDao implements Serializable {
+public class SecurityDao implements ISecurityDao {
 
 	private static final Logger log = Logger.getLogger(SecurityDao.class.getName());
 
 	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 8163391763545680396L;
-
-	/**
-	 * Select list of users
+	 * Select list of credentials
 	 * 
 	 * @return List<String>
 	 */
@@ -58,7 +53,6 @@ public class SecurityDao implements Serializable {
 	public Credentials getCredentialsById(Long id) {
 		SessionFactory sf = HibernateUtil.getSessionFactory();
 		Session session = sf.openSession();
-
 		Credentials user = (Credentials) session.get(Credentials.class, id);
 		session.close();
 		return user;
@@ -72,17 +66,14 @@ public class SecurityDao implements Serializable {
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Credentials> getCredentialsByLogin(String login) {
-		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-		Session session = sessionFactory.openSession();
+		Session session = HibernateUtil.getSessionFactory().openSession();
 		List<Credentials> credentials = new ArrayList<Credentials>();
-		Transaction transaction = null;
 		try {
-			transaction = session.beginTransaction();
-			credentials = session.createQuery("FROM credentials where login = '" + login + "'").list();
+			Transaction transaction = session.beginTransaction();
+			credentials = session.createQuery("FROM Credentials where login = '" + login + "'").list();
 			transaction.commit();
-
 		} catch (HibernateException e) {
-			log.info("Select all credentials method exception: " + e);
+			log.info("Select credentialsByLogin method exception: " + e);
 		}
 		return credentials;
 	}
@@ -94,27 +85,23 @@ public class SecurityDao implements Serializable {
 	 * @return Credentials
 	 */
 	public Credentials insertCredentials(Credentials credentials) {
-		SessionFactory sf = HibernateUtil.getSessionFactory();
-		Session session = sf.openSession();
+		Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
 		session.save(credentials);
-
 		session.getTransaction().commit();
 		session.close();
-
 		return credentials;
 	}
 
 	/**
-	 * Update user
+	 * Update credentials
 	 * 
 	 * @param credentials
 	 *            - Credentials object
 	 * @return Credentials
 	 */
 	public Credentials updateCredentials(Credentials credentials) {
-		SessionFactory sf = HibernateUtil.getSessionFactory();
-		Session session = sf.openSession();
+		Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
 		session.merge(credentials);
 		session.getTransaction().commit();
@@ -127,7 +114,7 @@ public class SecurityDao implements Serializable {
 	 * 
 	 * @param credentials
 	 */
-	public void deleteUserCredentials(Credentials credentials) {
+	public void deleteCredentials(Credentials credentials) {
 		SessionFactory sf = HibernateUtil.getSessionFactory();
 		Session session = sf.openSession();
 		session.beginTransaction();
