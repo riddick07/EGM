@@ -40,7 +40,6 @@ public class SecurityDao implements ISecurityDao {
 		} catch (HibernateException e) {
 			log.info("Select all credentials method exception: " + e);
 		}
-
 		return credentials;
 	}
 
