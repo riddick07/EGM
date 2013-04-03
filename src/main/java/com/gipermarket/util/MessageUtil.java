@@ -1,9 +1,16 @@
 package com.gipermarket.util;
 
 import java.text.MessageFormat;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
+/**
+ * 
+ * @author DO\dmitry.karpenko
+ * 
+ */
 public class MessageUtil {
+
 	/**
 	 * get message by it's key from messages.properties. If key is null or does not exist, message for message.default wiil be returned
 	 * 
@@ -12,13 +19,14 @@ public class MessageUtil {
 	 * @return String message
 	 */
 	public static String getMessage(String messageKey) {
+		Locale locale = new Locale("en_US");
 		if (messageKey == null) {
-			return (String) ResourceBundle.getBundle("messages").getObject("message.default");
+			return (String) ResourceBundle.getBundle("messages", locale).getObject("message.default");
 		}
 
-		String message = (String) ResourceBundle.getBundle("messages").getObject(messageKey);
+		String message = (String) ResourceBundle.getBundle("messages", locale).getObject(messageKey);
 		if (message == null) {
-			return (String) ResourceBundle.getBundle("messages").getObject("message.default");
+			return (String) ResourceBundle.getBundle("messages", locale).getObject("message.default");
 		}
 
 		return message;
@@ -35,13 +43,14 @@ public class MessageUtil {
 	 * @return String message
 	 */
 	public static String getMessage(String messageKey, String... params) {
+		Locale locale = new Locale("en_US");
 		if (messageKey == null) {
-			return (String) ResourceBundle.getBundle("messages").getObject("message.default");
+			return (String) ResourceBundle.getBundle("messages", locale).getObject("message.default");
 		}
 
-		String message = (String) ResourceBundle.getBundle("messages").getObject(messageKey);
+		String message = (String) ResourceBundle.getBundle("messages", locale).getObject(messageKey);
 		if (message == null) {
-			return (String) ResourceBundle.getBundle("messages").getObject("message.default");
+			return (String) ResourceBundle.getBundle("messages", locale).getObject("message.default");
 		}
 
 		MessageFormat formatter = new MessageFormat("");
