@@ -25,7 +25,8 @@
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:viewClass="org.springframework.web.servlet.view.JstlView"
 		p:prefix="/WEB-INF/pages/" p:suffix=".jsp" />
 
-	<bean id="generalController" abstract="true" class="com.gipermarket.view.controller.GeneralController">
+	<bean id="generalController" abstract="true"
+		class="com.gipermarket.view.controller.GeneralController">
 		<property name="jsonUtil" ref="jsonUtil" />
 	</bean>
 
