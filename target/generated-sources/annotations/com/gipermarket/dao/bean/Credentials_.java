@@ -10,6 +10,7 @@ public abstract class Credentials_ {
 
 	public static volatile SingularAttribute<Credentials, Long> id;
 	public static volatile SingularAttribute<Credentials, Long> userId;
+	public static volatile SingularAttribute<Credentials, Long> role;
 	public static volatile SingularAttribute<Credentials, String> login;
 	public static volatile SingularAttribute<Credentials, String> password;
 

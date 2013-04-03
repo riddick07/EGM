@@ -31,15 +31,15 @@ public abstract class GeneralController extends AbstractController {
 	private JsonUtil jsonUtil;
 
 	@Override
-	protected ModelAndView handleRequestInternal(HttpServletRequest req, HttpServletResponse resp) throws Exception {
+	protected ModelAndView handleRequestInternal(HttpServletRequest reqest, HttpServletResponse response) throws Exception {
 
-		HttpSession session = req.getSession();
+		HttpSession session = reqest.getSession();
 		SessionHelper sessionHelper = new SessionHelper(session);
 		if (!sessionHelper.isValid()) {
 			log.fine(MessageUtil.getMessage("message.sessionExpired"));
 			return returnLoginPage(timeoutMsg);
 		}
-		ModelAndView processRequest = processRequest(req, resp);
+		ModelAndView processRequest = processRequest(reqest, response);
 		if (processRequest == null) {
 			processRequest = new ModelAndView();
 		}

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Welcome world Gipermarket!</title>
+<title>Welcome to world Gipermarket!</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
 <jsp:include page="/WEB-INF/pages/includes/css.jsp" />
@@ -62,16 +62,17 @@
 					<a class="brand" href="#">E-Gipermarket</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav">
-							<li class="active"><a href="#">Home</a></li>
-							<li><a href="#about">About</a></li>
-							<li><a href="#contact">Contact</a></li>
+							<li class="active"><a href="${pageContext.request.contextPath}/pages/Login.vw">Home</a></li>
+							<li><a href="${pageContext.request.contextPath}/pages/">About</a></li>
+							<li><a href="${pageContext.request.contextPath}/pages/">Contact</a></li>
 						</ul>
 					</div>
 					<form id="loginForm" class="navbar-form pull-right" action="${pageContext.request.contextPath}/pages/Login.vw"
 						method="post">
 						<input id="login" name="login" class="span2" type="text" placeholder="Login"> <input id="password"
 							name="password" class="span2" type="password" type="password" placeholder="Password">
-						<button id="loginBtn" class="btn">Sign&nbspin</button>
+						<button id="loginBtn" class="btn m-top">Sign&nbspin</button>
+						<button id="registrationBtn" class="btn m-top">Regisration</button>
 					</form>
 				</div>
 			</div>
@@ -120,7 +121,7 @@
 	<div class="container marketing">
 		<hr class="featurette-divider">
 		<div class="featurette">
-			<img class="featurette-image pull-right" src="../assets/img/examples/browser-icon-chrome.png">
+			<img class="featurette-image pull-right" src="${pageContext.request.contextPath}/images/browser-icon-chrome.png">
 			<h2 class="featurette-heading">
 				First featurette headling. <span class="muted">It'll blow your mind.</span>
 			</h2>
@@ -131,7 +132,7 @@
 		<hr class="featurette-divider">
 
 		<div class="featurette">
-			<img class="featurette-image pull-left" src="../assets/img/examples/browser-icon-firefox.png">
+			<img class="featurette-image pull-left" src="${pageContext.request.contextPath}/images/browser-icon-firefox.png">
 			<h2 class="featurette-heading">
 				Oh yeah, it's that good. <span class="muted">See for yourself.</span>
 			</h2>
@@ -141,7 +142,7 @@
 
 		<hr class="featurette-divider">
 		<div class="featurette">
-			<img class="featurette-image pull-right" src="../assets/img/examples/browser-icon-safari.png">
+			<img class="featurette-image pull-right" src="${pageContext.request.contextPath}/images/browser-icon-safari.png">
 			<h2 class="featurette-heading">
 				And lastly, this one. <span class="muted">Checkmate.</span>
 			</h2>
@@ -157,7 +158,7 @@
 				// carousel demo
 				$('#myCarousel').carousel()
 			})
-		}(window.jQuery)
+		}(window.jQuery);
 	</script>
 </body>
 

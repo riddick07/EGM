@@ -18,6 +18,7 @@
 			<props>
 				<prop key="**/Home.vw">HomeController</prop>
 				<prop key="**/Login.vw">LoginController</prop>
+				<prop key="**/Registration.vw">RegistrationController</prop>
 			</props>
 		</property>
 	</bean>
@@ -30,6 +31,7 @@
 		<property name="jsonUtil" ref="jsonUtil" />
 	</bean>
 
+	<bean name="RegistrationController" class="com.gipermarket.view.controller.RegistrationController" />
 	<bean name="LoginController" class="com.gipermarket.view.controller.LoginController" />
 	<bean name="HomeController" parent="generalController" class="com.gipermarket.view.controller.HomeController" />
 	<mvc:resources mapping="/images/**" location="/images/" />

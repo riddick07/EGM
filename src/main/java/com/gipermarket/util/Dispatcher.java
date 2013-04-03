@@ -20,6 +20,14 @@ public class Dispatcher {
 		return new ModelAndView(PageParametersEnum.Login.name(), "model", model);
 	}
 
+	public static ModelAndView registrationPage(String message) {
+		// log.fine(MessageUtil.getMessage("message.dispatchOnLogin", message));
+		Map<String, Object> model = new HashMap<String, Object>();
+
+		model.put(PageParametersEnum.message.name(), message);
+		return new ModelAndView(PageParametersEnum.Registration.name(), "model", model);
+	}
+
 	public static ModelAndView homePage() {
 		return new ModelAndView(PageNamesEnum.Home.name());
 	}

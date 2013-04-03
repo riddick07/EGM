@@ -9,9 +9,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
 
-import com.gipermarket.services.api.ISecurityService;
-import com.gipermarket.services.bean.dto.SecurityValidationDto;
-import com.gipermarket.services.impl.SecurityServiceImpl;
+import com.gipermarket.services.api.ICredentialsService;
+import com.gipermarket.services.bean.dto.ValidationDto;
+import com.gipermarket.services.impl.CredentialsServiceImpl;
 import com.gipermarket.util.Dispatcher;
 import com.gipermarket.util.SessionHelper;
 import com.gipermarket.view.controller.enums.PageParametersEnum;
@@ -25,7 +25,7 @@ import com.gipermarket.view.controller.enums.PageParametersEnum;
 @Controller
 public class LoginController extends AbstractController {
 	
-	private ISecurityService securityService = new SecurityServiceImpl();
+	private ICredentialsService securityService = new CredentialsServiceImpl();
 
 	/**
 	 * Controller for returned Login page and validating credentials
@@ -51,7 +51,7 @@ public class LoginController extends AbstractController {
 			String requestPassword = request.getParameter(PageParametersEnum.password.name());
 			
 			if (requestUsername != null && requestPassword != null) {
-				SecurityValidationDto dto = securityService.validateCredentials(requestUsername, requestPassword);
+				ValidationDto dto = securityService.validateCredentials(requestUsername, requestPassword);
 				boolean valid = dto.getIsValid();
 				if (valid) {
 					sessionHelper.create(requestUsername, requestPassword);

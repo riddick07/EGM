@@ -24,6 +24,9 @@ public class Credentials implements Serializable {
 
 	@Column(name = "userId")
 	private Long userId;
+	
+	@Column(name = "role")
+	private Long role;
 
 	@Column(name = "login")
 	private String login;
