@@ -48,10 +48,6 @@
                                 $("#loginForm").submit();
                                 return true;
                             });
-                    $("#registrationBtn").click(function () {
-                        $("#loginForm").action = "${pageContext.request.contextPath}/pages/Login.vw?reg=true";
-                        $("#loginForm").submit();
-                    });
                     $('#carousel').carousel();
                 });
     </script>
@@ -61,11 +57,6 @@
     <div class="container">
         <div class="navbar navbar-inverse">
             <div class="navbar-inner">
-                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 <a class="brand" href="#">E-Gipermarket</a>
 
                 <div class="nav-collapse collapse">
@@ -75,15 +66,20 @@
                         <li><a href="${pageContext.request.contextPath}/pages/">Contact</a></li>
                     </ul>
                 </div>
+                <form id="regForm" class="navbar-form pull-right"
+                      action="${pageContext.request.contextPath}/pages/Login.vw?reg=true"
+                      method="post">
+                    <button id="registrationBtn" type="submit" class="btn btn-info m-top m-left avbar-form pull-right">Regisration
+                    </button>
+                </form>
                 <form id="loginForm" class="navbar-form pull-right"
-                      action="${pageContext.request.contextPath}/pages/Login.vw"
+                      action="${pageContext.request.contextPath}/pages/Login.vw?reg=true"
                       method="post">
                     <input id="login" name="login" class="span2" type="text" placeholder="Login">
                     <input id="password" name="password" class="span2" type="password" type="password"
                            placeholder="Password">
-                    <button id="loginBtn" class="btn m-top">Sign&nbspin</button>
+                    <button id="loginBtn" class="btn btn-info m-top m-left">Sign&nbspin</button>
                 </form>
-                <button id="registrationBtn" class="btn m-top">Regisration</button>
             </div>
         </div>
     </div>

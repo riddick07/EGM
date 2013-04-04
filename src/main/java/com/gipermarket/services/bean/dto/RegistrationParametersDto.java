@@ -8,12 +8,12 @@ package com.gipermarket.services.bean.dto;
  */
 public class RegistrationParametersDto {
 
-	public String login;
-	public String password;
-	public String name;
-	public String surname;
-	public String mail;
-	public String phone;
+	private String login;
+	private String password;
+	private String name;
+	private String surname;
+	private String mail;
+	private String phone;
 
 	public String getLogin() {
 		return login;
