@@ -9,48 +9,56 @@
 <jsp:include page="/WEB-INF/pages/includes/css.jsp" />
 <jsp:include page="/WEB-INF/pages/includes/jslib.jsp" />
 <script type="text/javascript">
-	$()
-			.ready(
-					function() {
-						if ("${model.message}".trim() != ""
-								&& "${model.message}" != null) {
-							showErrorDialog("${model.message}");
-						}
+	window.onload = function() {
+		if ("${model.message}".trim() != "" && "${model.message}" != null) {
+			showErrorDialog("${model.message}");
+		}
 
-						if ("${model.message}" != ""
-								&& ($("#password").val().trim() != "")
-								&& ($("#login").val().trim() != "")) {
-							showErrorDialog("${model.message}");
-						}
+		if ("${model.message}" != "" && ($("#password").val().trim() != "")
+				&& ($("#login").val().trim() != "")) {
+			showErrorDialog("${model.message}");
+		}
 
-						if (typeof String.prototype.trim !== 'function') {
-							String.prototype.trim = function() {
-								return this.replace(/^\s+|\s+$/g, '');
-							};
-						}
+		if (typeof String.prototype.trim !== 'function') {
+			String.prototype.trim = function() {
+				return this.replace(/^\s+|\s+$/g, '');
+			};
+		}
 
-						$("#regBtn").click(function() {
-											if ($("#password").val().trim() == "" && $("#login").val().trim() == "" && $("#name").val().trim() == "") {
-												showErrorDialog("Login, User name and password can't be empty!");
-												return false;
-											} else if ($("#login").val().trim() == "") {
-												showErrorDialog("Please enter login!");
-												return false;
-											} else if ($("#password").val().trim() == "") {
-												showErrorDialog("Please enter password!");
-												return false;
-											}if ($("#name").val().trim() == "") {
-												showErrorDialog("Please enter your name!");
-												return false;
-											}
-											$("#loginForm").submit();
-											return true;
-										});
-						function validateEmail(email) { 
-						    var re = '/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/';
-						    return re.test(email);
-						} 
-					});
+		$("#regBtn")
+				.click(
+						function() {
+							if ($("#password").val().trim() == ""
+									&& $("#login").val().trim() == ""
+									&& $("#name").val().trim() == "") {
+								showErrorDialog("Login, User name and password can't be empty!");
+								return false;
+							} else if ($("#login").val().trim() == "") {
+								showErrorDialog("Please enter login!");
+								return false;
+							} else if ($("#password").val().trim() == "") {
+								showErrorDialog("Please enter password!");
+								return false;
+							}
+							if ($("#name").val().trim() == "") {
+								showErrorDialog("Please enter your name!");
+								return false;
+							}
+							validate('regForm', 'mail');
+
+							$("#regForm").submit();
+							return true;
+						});
+	};
+
+	function validate(form_id, email) {
+		var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+		var address = document.forms[form_id].elements[email].value;
+		if (reg.test(address) == false) {
+			showErrorDialog('Invalid Email Address');
+			return false;
+		}
+	}
 </script>
 </head>
 <body class="body-t">
@@ -71,8 +79,8 @@
 		</div>
 	</div>
 	<div class="m-top">
-		<form id="loginForm" class="m-top pagination-centered"
-			action="${pageContext.request.contextPath}/pages/Registration.vw" method="post">
+		<form id="regForm" class="m-top pagination-centered" action="${pageContext.request.contextPath}/pages/Registration.vw"
+			method="post">
 			<input id="login" name="login" class="m-top reg" type="text" placeholder="Username">
 			<input id="password" name="password" class="reg" type="password" placeholder="Password">
 			<input id="retype_password" name="retype_password" class="reg" type="password" placeholder="Retype Password">
@@ -81,7 +89,7 @@
 			<input id="mail" name="mail" class="reg" placeholder="Mail" type="text">
 			<input id="phone" name="phone" class="reg" placeholder="Phone" type="text">
 			<div class="pagination-centered">
-				<button id="regBtn" class="btn reg">Registrate</button>
+				<button id="regBtn" class="btn reg">Register</button>
 			</div>
 		</form>
 	</div>

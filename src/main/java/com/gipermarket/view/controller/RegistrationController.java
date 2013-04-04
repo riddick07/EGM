@@ -41,7 +41,7 @@ public class RegistrationController extends AbstractController {
 		String phone = request.getParameter(PageParametersEnum.phone.name());
 
 		if (!password.equals(re_password))
-			return Dispatcher.registrationPage("Passwords are no equal");
+			return Dispatcher.registrationPage("Passwords are no equals");
 
 		dto.setLogin(login);
 		dto.setMail(mail);

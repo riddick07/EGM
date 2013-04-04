@@ -42,9 +42,13 @@ public class LoginController extends AbstractController {
 
 		if (String.valueOf(Boolean.TRUE).equals(request.getParameter(PageParametersEnum.logout.name()))) {
 			sessionHelper.destroy();
-			return new ModelAndView(PageParametersEnum.Login.name());
+			return Dispatcher.loginPage("");
 		}
-
+		
+		if (String.valueOf(Boolean.TRUE).equals(request.getParameter(PageParametersEnum.reg.name()))) {
+			return Dispatcher.registrationPage("");
+		}
+		
 		if (!sessionHelper.isValid()) {
 			/** User name and password from parameter request **/
 			String requestUsername = request.getParameter(PageParametersEnum.login.name());

@@ -8,23 +8,8 @@
 					<li><a href="${pageContext.request.contextPath}/pages/Home.vw">Home</a></li>
 				</ul>
 				<ul class="nav hdr">
-					<li><a href="${pageContext.request.contextPath}/pages/ChartLayout.vw?chartType=LiveReport">Live Report</a></li>
-				</ul>
-				<ul class="nav hdr">
-					<li><a href="${pageContext.request.contextPath}/pages/Estimations.vw">Estimations</a></li>
-				</ul>
-				<ul class="nav hdr">
 					<li><a href="${pageContext.request.contextPath}/pages/ChartLayout.vw?chartType=Review">Review</a></li>
 				</ul>
-				<ul class="nav hdr">
-					<li><a href="${pageContext.request.contextPath}/pages/Roadmap.vw">Roadmap</a></li>
-				</ul>
-                <ul class="nav hdr">
-                    <li><a href="${pageContext.request.contextPath}/pages/Standup.vw">Standup</a></li>
-                </ul>
-                <ul class="nav hdr">
-                    <li><a href="${pageContext.request.contextPath}/pages/Projections.vw">Projections</a></li>
-                </ul>
 				<ul class="nav pull-right">
 					<li class="active m-top"><span style="color: cyan;" id="loginedUserLabel">${user},</span><a
 						href="${pageContext.request.contextPath}/pages/Login.vw?logout=true" style="display: inline">Log&nbsp;out</a></li>
