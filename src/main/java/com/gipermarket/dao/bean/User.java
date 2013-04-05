@@ -3,11 +3,14 @@ package com.gipermarket.dao.bean;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -36,7 +39,8 @@ public class User implements Serializable {
 	@Column(name = "surname")
 	private String surname;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinTable(name="USER_CREDENTIALS", joinColumns = @JoinColumn(name="USER_ID"), inverseJoinColumns = @JoinColumn(name="CREDENTIALS_ID"))
 	private Credentials credentials;
 
 	@Column(name = "mail")
@@ -63,10 +67,6 @@ public class User implements Serializable {
 	
 	public Credentials getCredentials() {
 		return credentials;
-	}
-
-	public void setCredentials(Credentials credentials) {
-		this.credentials = credentials;
 	}
 
 	public Long getId() {

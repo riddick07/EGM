@@ -22,39 +22,40 @@ import com.gipermarket.view.controller.enums.PageParametersEnum;
 @Controller
 public class RegistrationController extends AbstractController {
 
-    private IRegistrationService regService = new RegistrationServiceImpl();
+	private IRegistrationService regService = new RegistrationServiceImpl();
 
-    @Override
-    protected ModelAndView handleRequestInternal(HttpServletRequest request, HttpServletResponse resp) throws Exception {
-        HttpSession session = request.getSession(true);
-        SessionHelper sessionHelper = new SessionHelper(session);
-        RegistrationParametersDto dto = new RegistrationParametersDto();
+	@Override
+	protected ModelAndView handleRequestInternal(HttpServletRequest request, HttpServletResponse resp) throws Exception {
+		HttpSession session = request.getSession(true);
+		SessionHelper sessionHelper = new SessionHelper(session);
+		RegistrationParametersDto dto = new RegistrationParametersDto();
 
-        String login = request.getParameter(PageParametersEnum.login.name());
-        String password = request.getParameter(PageParametersEnum.password.name());
-        String re_password = request.getParameter(PageParametersEnum.retype_password.name());
-        String name = request.getParameter(PageParametersEnum.name.name());
-        String surname = request.getParameter(PageParametersEnum.surname.name());
-        String mail = request.getParameter(PageParametersEnum.mail.name());
-        String phone = request.getParameter(PageParametersEnum.phone.name());
+		String login = request.getParameter(PageParametersEnum.login.name());
+		String password = request.getParameter(PageParametersEnum.password.name());
+		String re_password = request.getParameter(PageParametersEnum.retype_password.name());
+		String name = request.getParameter(PageParametersEnum.name.name());
+		String surname = request.getParameter(PageParametersEnum.surname.name());
+		String mail = request.getParameter(PageParametersEnum.mail.name());
+		String phone = request.getParameter(PageParametersEnum.phone.name());
 
-        if (!password.equals(re_password))
-            return Dispatcher.registrationPage("Passwords are no equals");
+		if (!password.equals(re_password))
+			return Dispatcher.registrationPage("Passwords are no equals");
 
-        dto.setLogin(login);
-        dto.setMail(mail);
-        dto.setName(name);
-        dto.setSurname(surname);
-        dto.setPassword(password);
-        dto.setPhone(phone);
+		dto.setLogin(login);
+		dto.setMail(mail);
+		dto.setName(name);
+		dto.setSurname(surname);
+		dto.setPassword(password);
+		dto.setPhone(phone);
 
-        ValidationDto validateParameters = regService.validateParameters(dto);
+		ValidationDto validateParameters = regService.validateParameters(dto);
 
-        if (validateParameters.getIsValid()) {
-            sessionHelper.create(login, password);
-            return Dispatcher.homePage();
-        } else {
-            return Dispatcher.registrationPage(validateParameters.getMessage());
-        }
-    }
+		if (validateParameters.getIsValid()) {
+			regService.registrateUser(dto);
+			sessionHelper.create(login, password);
+			return Dispatcher.homePage();
+		} else {
+			return Dispatcher.registrationPage(validateParameters.getMessage());
+		}
+	}
 }
