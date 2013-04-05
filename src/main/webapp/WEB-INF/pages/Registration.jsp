@@ -79,12 +79,12 @@
 			</div>
 		</div>
 	</div>
-	<div class="container pagination-centered">
-		<div class="login-header span6">
-			<h1>Registration form</h1>
+	<div class="container pagination-centered offset6 span6">
+		<div class="login-header">
+			<h2>Registration form</h2>
 		</div>
 	</div>
-	<div class="m-top  pagination-centered span6">
+	<div class="m-top  pagination-centered offset6">
 		<form id="regForm" class="m-top" action="${pageContext.request.contextPath}/pages/Registration.vw" method="post">
 			<input id="login" name="login" class="m-top reg" placeholder="Username"  type="text">
 			<input id="password" name="password" class="reg" placeholder="Password"  type="password">

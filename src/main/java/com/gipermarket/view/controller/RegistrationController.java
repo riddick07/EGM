@@ -52,8 +52,7 @@ public class RegistrationController extends AbstractController {
 
 		if (validateParameters.getIsValid()) {
 			regService.registrateUser(dto);
-			sessionHelper.create(login, password);
-			return Dispatcher.homePage();
+			return Dispatcher.loginPage("User is registrated");
 		} else {
 			return Dispatcher.registrationPage(validateParameters.getMessage());
 		}

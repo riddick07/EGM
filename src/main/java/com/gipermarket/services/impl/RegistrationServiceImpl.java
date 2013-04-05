@@ -38,7 +38,7 @@ public class RegistrationServiceImpl implements IRegistrationService {
 		result.setIsValid(true);
 
 		if (parameters.getLogin() == null) {
-			return falseResult("Login is can't be empty");
+			result = falseResult("Login is can't be empty");
 		}
 
 		List<Credentials> credentialses = credentialsDao.credentialsList();
@@ -57,7 +57,9 @@ public class RegistrationServiceImpl implements IRegistrationService {
 		if (parameters.getPassword().length() < 6) {
 			result = falseResult("Password is too short");
 		}
-
+		if (result.getMessage() != null) {
+			log.info(result.getMessage());
+		}
 		return result;
 	}
 
