@@ -29,8 +29,7 @@
 							};
 						}
 
-						$("#loginBtn")
-								.click(
+						$("#loginBtn").click(
 										function() {
 											if (($("#password").val().trim() == "")
 													&& ($("#login").val()
@@ -62,7 +61,6 @@
 			<div class="navbar navbar-inverse">
 				<div class="navbar-inner">
 					<a class="brand" href="#">E-Gipermarket</a>
-
 					<div class="nav-collapse collapse">
 						<ul class="nav">
 							<li class="active"><a href="${pageContext.request.contextPath}/pages/Login.vw">Home</a></li>
@@ -72,7 +70,7 @@
 					</div>
 					<button onclick="redirectOnRegistrationPage();" class="btn btn-info m-top m-left avbar-form pull-right">Regisration</button>
 					<form id="loginForm" class="navbar-form pull-right"
-						action="${pageContext.request.contextPath}/pages/Login.vw?reg=true" method="post">
+						action="${pageContext.request.contextPath}/pages/Login.vw" method="post">
 						<input id="login" name="login" class="span2" type="text" placeholder="Login">
 						<input id="password" name="password" class="span2" type="password" type="password" placeholder="Password">
 						<button id="loginBtn" class="btn btn-info m-top m-left">Sign&nbspin</button>

@@ -1,5 +1,7 @@
 package com.gipermarket.services.api;
 
+import java.util.List;
+
 import com.gipermarket.services.bean.dto.ValidationDto;
 
 /**
@@ -10,5 +12,7 @@ import com.gipermarket.services.bean.dto.ValidationDto;
 public interface ICredentialsService {
 	
 	public ValidationDto validateCredentials(String login, String password);
+	
+	public List<String> listOfRoles();
 	
 }

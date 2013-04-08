@@ -1,6 +1,7 @@
 package com.gipermarket.util;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
@@ -9,6 +10,9 @@ import org.springframework.web.servlet.ModelAndView;
 import com.gipermarket.view.controller.enums.PageNamesEnum;
 import com.gipermarket.view.controller.enums.PageParametersEnum;
 
+/**
+ *
+ */
 public class Dispatcher {
 	private static final Logger log = Logger.getLogger(Dispatcher.class.getName());
 
@@ -20,11 +24,12 @@ public class Dispatcher {
 		return new ModelAndView(PageParametersEnum.Login.name(), "model", model);
 	}
 
-	public static ModelAndView registrationPage(String message) {
-		// log.fine(MessageUtil.getMessage("message.dispatchOnLogin", message));
+	public static ModelAndView registrationPage(String message, List<String> roles) {
 		Map<String, Object> model = new HashMap<String, Object>();
-
 		model.put(PageParametersEnum.message.name(), message);
+		if (roles != null)
+			model.put(PageParametersEnum.roles.name(), roles);
+		
 		return new ModelAndView(PageParametersEnum.Registration.name(), "model", model);
 	}
 

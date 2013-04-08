@@ -42,10 +42,8 @@ public class LoginController extends AbstractController {
             return Dispatcher.loginPage("");
         }
 
-        System.out.println(request.getServletPath() + "       "+ request.getPathTranslated());;
-        System.out.println(request.getPathInfo() + "       "+ request.getRequestURI());;
         if (String.valueOf(Boolean.TRUE).equals(request.getParameter(PageParametersEnum.reg.name()))) {
-            return Dispatcher.registrationPage("");
+            return Dispatcher.registrationPage("", securityService.listOfRoles());
         }
 
         if (!sessionHelper.isValid()) {

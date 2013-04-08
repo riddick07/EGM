@@ -121,4 +121,17 @@ public class CredentialsDao implements ICredentialsDao {
 		session.getTransaction().commit();
 		session.close();
 	}
+
+	public List<String> getRoles() {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		List<String> roles = new ArrayList<String>();
+		try {
+			Transaction transaction = session.beginTransaction();
+			roles = session.createQuery("SELECT role FROM Credentials").list();
+			transaction.commit();
+		} catch (HibernateException e) {
+			log.info("Select credentialsByLogin method exception: " + e);
+		}
+		return roles;
+	}
 }

@@ -2,7 +2,6 @@ package com.gipermarket.view.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
@@ -13,7 +12,6 @@ import com.gipermarket.services.bean.dto.RegistrationParametersDto;
 import com.gipermarket.services.bean.dto.ValidationDto;
 import com.gipermarket.services.impl.RegistrationServiceImpl;
 import com.gipermarket.util.Dispatcher;
-import com.gipermarket.util.SessionHelper;
 import com.gipermarket.view.controller.enums.PageParametersEnum;
 
 /**
@@ -26,8 +24,8 @@ public class RegistrationController extends AbstractController {
 
 	@Override
 	protected ModelAndView handleRequestInternal(HttpServletRequest request, HttpServletResponse resp) throws Exception {
-		HttpSession session = request.getSession(true);
-		SessionHelper sessionHelper = new SessionHelper(session);
+		// HttpSession session = request.getSession(true);
+		// SessionHelper sessionHelper = new SessionHelper(session);
 		RegistrationParametersDto dto = new RegistrationParametersDto();
 
 		String login = request.getParameter(PageParametersEnum.login.name());
@@ -39,7 +37,7 @@ public class RegistrationController extends AbstractController {
 		String phone = request.getParameter(PageParametersEnum.phone.name());
 
 		if (!password.equals(re_password))
-			return Dispatcher.registrationPage("Passwords are no equals");
+			return Dispatcher.registrationPage("Passwords are no equals", null);
 
 		dto.setLogin(login);
 		dto.setMail(mail);
@@ -54,7 +52,7 @@ public class RegistrationController extends AbstractController {
 			regService.registrateUser(dto);
 			return Dispatcher.loginPage("User is registrated");
 		} else {
-			return Dispatcher.registrationPage(validateParameters.getMessage());
+			return Dispatcher.registrationPage(validateParameters.getMessage(), null);
 		}
 	}
 }
