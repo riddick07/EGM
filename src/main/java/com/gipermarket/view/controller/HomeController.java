@@ -5,6 +5,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.servlet.ModelAndView;
 
+import com.gipermarket.util.Dispatcher;
+
 
 /**
  * Controller for Home page
@@ -15,6 +17,6 @@ import org.springframework.web.servlet.ModelAndView;
 public class HomeController extends GeneralController {
 	@Override
 	protected ModelAndView processRequest(HttpServletRequest req, HttpServletResponse resp) throws Exception {
-		return returnHomePage();
+		return Dispatcher.homePage();
 	}
 }

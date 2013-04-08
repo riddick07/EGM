@@ -18,10 +18,15 @@ import com.gipermarket.view.controller.enums.PageParametersEnum;
 public class Dispatcher {
 	private static final Logger log = Logger.getLogger(Dispatcher.class.getName());
 
-	public static ModelAndView loginPage(String message) {
+	public static ModelAndView loginPage(String message, List<String> roles) {
 		log.fine(MessageUtil.getMessage("message.dispatchOnLogin", message));
 		Map<String, Object> model = new HashMap<String, Object>();
-
+		if (roles == null) {
+			roles = new ArrayList<String>();
+			roles.add(RolesEnum.BUYER.getName());
+			roles.add(RolesEnum.GUEST.getName());
+		}
+		model.put(PageParametersEnum.roles.name(), roles);
 		model.put(PageParametersEnum.message.name(), message);
 		return new ModelAndView(PageParametersEnum.Login.name(), "model", model);
 	}

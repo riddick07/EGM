@@ -50,7 +50,7 @@ public class RegistrationController extends AbstractController {
 
 		if (validateParameters.getIsValid()) {
 			regService.registrateUser(dto);
-			return Dispatcher.loginPage("User is registrated");
+			return Dispatcher.loginPage("User is registrated", null);
 		} else {
 			return Dispatcher.registrationPage(validateParameters.getMessage(), null);
 		}

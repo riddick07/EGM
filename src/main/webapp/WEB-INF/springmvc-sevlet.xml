@@ -36,9 +36,9 @@
 
 	<bean name="RegistrationController" class="com.gipermarket.view.controller.RegistrationController" />
 	<bean name="LoginController" class="com.gipermarket.view.controller.LoginController" />
+	<bean name="ContactController" class="com.gipermarket.view.controller.ContactController" />
+	<bean name="AboutController" class="com.gipermarket.view.controller.AboutController" />
 	<bean name="AdminPanelController" parent="generalController" class="com.gipermarket.view.controller.AdminPanelController" />
-	<bean name="ContactController" parent="generalController" class="com.gipermarket.view.controller.ContactController" />
-	<bean name="AboutController" parent="generalController" class="com.gipermarket.view.controller.AboutController" />
 	<bean name="HomeController" parent="generalController" class="com.gipermarket.view.controller.HomeController" />
 	<mvc:resources mapping="/images/**" location="/images/" />
 	<mvc:resources mapping="/lib/**" location="/lib/" />

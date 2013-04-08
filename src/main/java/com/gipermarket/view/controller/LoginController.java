@@ -40,7 +40,7 @@ public class LoginController extends AbstractController {
 
 		if (String.valueOf(Boolean.TRUE).equals(request.getParameter(PageParametersEnum.logout.name()))) {
 			sessionHelper.destroy();
-			return Dispatcher.loginPage("");
+			return Dispatcher.loginPage("", null);
 		}
 
 		if (String.valueOf(Boolean.TRUE).equals(request.getParameter(PageParametersEnum.reg.name()))) {
@@ -59,12 +59,12 @@ public class LoginController extends AbstractController {
 					return Dispatcher.redirectHomePage();
 				} else {
 					sessionHelper.destroy();
-					return Dispatcher.loginPage(dto.getMessage());
+					return Dispatcher.loginPage("", null);
 				}
 			}
 		} else {
 			return Dispatcher.homePage();
 		}
-		return Dispatcher.loginPage("");
+		return Dispatcher.loginPage("", null);
 	}
 }

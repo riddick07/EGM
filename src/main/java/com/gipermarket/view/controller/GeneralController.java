@@ -1,6 +1,5 @@
 package com.gipermarket.view.controller;
 
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -37,7 +36,7 @@ public abstract class GeneralController extends AbstractController {
 		SessionHelper sessionHelper = new SessionHelper(session);
 		if (!sessionHelper.isValid()) {
 			log.fine(MessageUtil.getMessage("message.sessionExpired"));
-			return returnLoginPage(timeoutMsg);
+			return Dispatcher.loginPage(timeoutMsg, null);
 		}
 		ModelAndView processRequest = processRequest(reqest, response);
 		if (processRequest == null) {
@@ -69,27 +68,6 @@ public abstract class GeneralController extends AbstractController {
 	 */
 	protected void removeSessionAttributes(HttpSession session) {
 		new SessionHelper(session).destroy();
-	}
-
-	/**
-	 * Generating model of Login page
-	 * 
-	 * @param message
-	 * @return Login page ModelAndView
-	 */
-	protected ModelAndView returnLoginPage(String message) {
-		return Dispatcher.loginPage(message);
-	}
-
-	/**
-	 * Generate Home page model
-	 * 
-	 * @param user
-	 *            - user for view
-	 * @return Home page ModelAndView
-	 */
-	protected ModelAndView returnHomePage() {
-		return Dispatcher.homePage();
 	}
 
 	/**

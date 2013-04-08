@@ -113,7 +113,7 @@
 	<jsp:include page="/WEB-INF/pages/includes/footer.jsp" />
 </body>
 <style id="holderjs-style" type="text/css">
-input.reg {
+select input.reg {
 	margin-top: 15px;
 	padding-left: 0;
 	padding-right: 0;
