@@ -19,6 +19,7 @@
 				<prop key="**/Home.vw">HomeController</prop>
 				<prop key="**/Login.vw">LoginController</prop>
 				<prop key="**/Registration.vw">RegistrationController</prop>
+				<prop key="**/AdminPanel.vw">AdminPanelController</prop>
 			</props>
 		</property>
 	</bean>
@@ -34,6 +35,7 @@
 	<bean name="RegistrationController" class="com.gipermarket.view.controller.RegistrationController" />
 	<bean name="LoginController" class="com.gipermarket.view.controller.LoginController" />
 	<bean name="HomeController" parent="generalController" class="com.gipermarket.view.controller.HomeController" />
+	<bean name="AdminPanelController" parent="generalController" class="com.gipermarket.view.controller.AdminPanelController" />
 	<mvc:resources mapping="/images/**" location="/images/" />
 	<mvc:resources mapping="/lib/**" location="/lib/" />
 </beans>

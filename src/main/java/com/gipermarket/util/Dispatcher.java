@@ -1,5 +1,6 @@
 package com.gipermarket.util;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -7,6 +8,7 @@ import java.util.logging.Logger;
 
 import org.springframework.web.servlet.ModelAndView;
 
+import com.gipermarket.dao.enums.RolesEnum;
 import com.gipermarket.view.controller.enums.PageNamesEnum;
 import com.gipermarket.view.controller.enums.PageParametersEnum;
 
@@ -26,10 +28,16 @@ public class Dispatcher {
 
 	public static ModelAndView registrationPage(String message, List<String> roles) {
 		Map<String, Object> model = new HashMap<String, Object>();
+
+		if (roles == null) {
+			roles = new ArrayList<String>();
+			roles.add(RolesEnum.BUYER.getName());
+			roles.add(RolesEnum.GUEST.getName());
+		}
+
 		model.put(PageParametersEnum.message.name(), message);
-		if (roles != null)
-			model.put(PageParametersEnum.roles.name(), roles);
-		
+		model.put(PageParametersEnum.roles.name(), roles);
+
 		return new ModelAndView(PageParametersEnum.Registration.name(), "model", model);
 	}
 

@@ -29,6 +29,7 @@
     <file path="/CredentialsServiceImpl.java" changelist="8aee39ff-3897-4ea4-8de7-caceff6cdda4" time="1365418089137" ignored="false" />
     <file path="/CredentialsDao.java" changelist="8aee39ff-3897-4ea4-8de7-caceff6cdda4" time="1365421125748" ignored="false" />
     <file path="/ICredentialsDao.java" changelist="8aee39ff-3897-4ea4-8de7-caceff6cdda4" time="1365418405687" ignored="false" />
+    <file path="/header.jsp" changelist="8aee39ff-3897-4ea4-8de7-caceff6cdda4" time="1365430681477" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +100,7 @@
       <file leaf-file-name="LoginController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gipermarket/view/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="6" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0">
+            <state line="19" column="6" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -114,15 +115,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CredentialsDao.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CredentialsDao.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gipermarket/dao/impl/CredentialsDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="3" selection-start="3773" selection-end="3773" vertical-scroll-proportion="0.89312977">
+            <state line="137" column="3" selection-start="3686" selection-end="3686" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#693#723#0" expanded="true" />
                 <element signature="e#1602#1632#0" expanded="true" />
-                <element signature="e#3407#3420#0" expanded="true" />
+                <element signature="e#3388#3396#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminPanel.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/AdminPanel.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="56" selection-start="750" selection-end="750" vertical-scroll-proportion="-17.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/includes/header.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="96" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.66502464">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -130,9 +149,12 @@
       <file leaf-file-name="Dispatcher.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gipermarket/util/Dispatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="61" selection-start="988" selection-end="988" vertical-scroll-proportion="0.0">
+            <state line="38" column="61" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#859#875#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#676#692#0" expanded="false" />
+                <marker date="1365425989923" expanded="true" signature="1235:1321" placeholder="{...}" />
+                <marker date="1365425989923" expanded="true" signature="1165:1181" placeholder="&lt;~&gt;" />
               </folding>
             </state>
           </provider>
@@ -150,7 +172,7 @@
       <file leaf-file-name="Registration.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Registration.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="47" selection-start="1162" selection-end="1162" vertical-scroll-proportion="-16.25">
+            <state line="26" column="47" selection-start="976" selection-end="976" vertical-scroll-proportion="-16.25">
               <folding />
             </state>
           </provider>
@@ -178,7 +200,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/includes/jslib.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/gipermarket/view/controller/GeneralController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/includes/css.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/includes/header.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Login.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/gipermarket/view/controller/RegistrationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gipermarket/dao/bean/User.java" />
@@ -190,6 +211,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gipermarket/services/impl/CredentialsServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gipermarket/dao/api/ICredentialsDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gipermarket/dao/impl/CredentialsDao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/includes/header.jsp" />
       </list>
     </option>
   </component>
@@ -923,7 +945,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1165" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32940018" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1012,20 +1034,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="28" selection-start="2400" selection-end="2400" vertical-scroll-proportion="0.04912837">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/includes/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="47" selection-start="792" selection-end="792" vertical-scroll-proportion="0.35657686">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gipermarket/view/controller/GeneralController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="85" selection-start="1422" selection-end="1422" vertical-scroll-proportion="0.0">
@@ -1056,7 +1064,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Registration.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="47" selection-start="1162" selection-end="1162" vertical-scroll-proportion="-16.25">
+        <state line="26" column="47" selection-start="976" selection-end="976" vertical-scroll-proportion="-16.25">
           <folding />
         </state>
       </provider>
@@ -1070,9 +1078,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gipermarket/util/Dispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="61" selection-start="988" selection-end="988" vertical-scroll-proportion="0.0">
+        <state line="38" column="61" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#859#875#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#676#692#0" expanded="false" />
+            <marker date="1365425989923" expanded="true" signature="1235:1321" placeholder="{...}" />
+            <marker date="1365425989923" expanded="true" signature="1165:1181" placeholder="&lt;~&gt;" />
           </folding>
         </state>
       </provider>
@@ -1100,7 +1111,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gipermarket/view/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="6" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0">
+        <state line="19" column="6" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1121,12 +1132,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gipermarket/dao/impl/CredentialsDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="3" selection-start="3773" selection-end="3773" vertical-scroll-proportion="0.89312977">
+        <state line="137" column="3" selection-start="3686" selection-end="3686" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#693#723#0" expanded="true" />
             <element signature="e#1602#1632#0" expanded="true" />
-            <element signature="e#3407#3420#0" expanded="true" />
+            <element signature="e#3388#3396#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/AdminPanel.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="56" selection-start="750" selection-end="750" vertical-scroll-proportion="-17.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/includes/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="96" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.66502464">
+          <folding />
         </state>
       </provider>
     </entry>

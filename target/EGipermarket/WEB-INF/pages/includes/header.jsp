@@ -9,7 +9,7 @@
 						<li><a href="${pageContext.request.contextPath}/pages/">About</a></li>
 						<li><a href="${pageContext.request.contextPath}/pages/">Contact</a></li>
 					</ul>
-					<ul class="nav pull-right">
+					<ul class="nav pull-right" id="rightPanel">
 						<li class="active m-top"><span style="color: cyan;" id="loginedUserLabel">${user},</span> <a
 								href="${pageContext.request.contextPath}/pages/Login.vw?logout=true" style="display: inline">Log&nbsp;out</a></li>
 					</ul>
@@ -18,3 +18,13 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+	window.onload = function() {
+		var role = "${model.role}";
+		if (role == "Administrator" || role == "Developer") {
+			$("#rightPanel")
+					.append(
+							'<li><a href="${pageContext.request.contextPath}/pages/AdminPanel.vw">Admin panel</a></li>');
+		}
+	};
+</script>
