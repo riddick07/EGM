@@ -64,8 +64,8 @@
 					<div class="nav-collapse collapse">
 						<ul class="nav">
 							<li class="active"><a href="${pageContext.request.contextPath}/pages/Login.vw">Home</a></li>
-							<li><a href="${pageContext.request.contextPath}/pages/">About</a></li>
-							<li><a href="${pageContext.request.contextPath}/pages/">Contact</a></li>
+							<li><a href="${pageContext.request.contextPath}/pages/About.vw">About</a></li>
+							<li><a href="${pageContext.request.contextPath}/pages/Contact.vw">Contact</a></li>
 						</ul>
 					</div>
 					<button onclick="redirectOnRegistrationPage();" class="btn btn-info m-top m-left avbar-form pull-right">Regisration</button>

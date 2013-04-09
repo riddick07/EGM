@@ -46,8 +46,14 @@ public class Dispatcher {
 		return new ModelAndView(PageParametersEnum.Registration.name(), "model", model);
 	}
 
-	public static ModelAndView homePage() {
-		return new ModelAndView(PageNamesEnum.Home.name());
+	public static ModelAndView homePage(RolesEnum role) {
+		Map<String, Object> model = new HashMap<String, Object>();
+
+		if (role == null)// TODO: Change on logging and exception. Now its trick
+			role = RolesEnum.ADMINISTRATOR;
+
+		model.put(PageParametersEnum.role.name(), role.getName());
+		return new ModelAndView(PageNamesEnum.Home.name(), "model", model);
 	}
 
 	public static ModelAndView redirectHomePage() {

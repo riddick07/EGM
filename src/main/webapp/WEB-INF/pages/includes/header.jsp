@@ -18,13 +18,3 @@
 		</div>
 	</div>
 </div>
-<script type="text/javascript">
-	window.onload = function() {
-		var role = "${model.role}";
-		if (role == "Administrator" || role == "Developer") {
-			$("#rightPanel")
-					.append(
-							'<li><a href="${pageContext.request.contextPath}/pages/AdminPanel.vw">Admin panel</a></li>');
-		}
-	};
-</script>

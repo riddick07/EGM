@@ -11,6 +11,13 @@
 <jsp:include page="/WEB-INF/pages/includes/header.jsp" />
 </head>
 <body>
+
+<header>
+
+</header>
+
+<nav></nav>
+
 	<div class="tabbable tabs-left">
 		<ul class="nav nav-tabs">
 		

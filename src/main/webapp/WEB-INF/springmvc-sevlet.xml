@@ -21,7 +21,7 @@
 				<prop key="**/Registration.vw">RegistrationController</prop>
 				<prop key="**/AdminPanel.vw">AdminPanelController</prop>
 				<prop key="**/About.vw">AboutController</prop>
-				<prop key="**/ContactPanel.vw">ContactController</prop>
+				<prop key="**/Contact.vw">ContactController</prop>
 			</props>
 		</property>
 	</bean>

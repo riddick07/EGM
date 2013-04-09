@@ -4,7 +4,7 @@ import com.gipermarket.util.MessageUtil;
 
 public enum RolesEnum {
 
-	ADMIN("Administrator"), DEVELOPER("Developer"), CUSTOMER("Customer"), GUEST("Guest"), SELLER("Seller"), BUYER("Buyer");
+	ADMINISTRATOR("Administrator"), DEVELOPER("Developer"), CUSTOMER("Customer"), GUEST("Guest"), SELLER("Seller"), BUYER("Buyer");
 
 	private String name;
 
@@ -16,7 +16,7 @@ public enum RolesEnum {
 		return name;
 	}
 
-	public static RolesEnum getName(String name) {
+	public static RolesEnum getEnum(String name) {
 		RolesEnum[] values = values();
 		for (RolesEnum report : values) {
 			if (report.getName().equals(name)) {

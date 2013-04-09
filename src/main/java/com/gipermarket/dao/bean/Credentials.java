@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.gipermarket.dao.enums.RolesEnum;
+
 @Entity
 @Table(name = "Credentials", catalog = "egipermarket")
 public class Credentials implements Serializable {
@@ -26,7 +28,7 @@ public class Credentials implements Serializable {
 	private Long userId;
 	
 	@Column(name = "role")
-	private Long role;
+	private RolesEnum role;
 
 	@Column(name = "login")
 	private String login;
@@ -72,40 +74,11 @@ public class Credentials implements Serializable {
 		this.password = password;
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((login == null) ? 0 : login.hashCode());
-		result = prime * result + ((password == null) ? 0 : password.hashCode());
-		result = prime * result + ((userId == null) ? 0 : userId.hashCode());
-		return result;
+	public RolesEnum getRole() {
+		return role;
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Credentials other = (Credentials) obj;
-		if (login == null) {
-			if (other.login != null)
-				return false;
-		} else if (!login.equals(other.login))
-			return false;
-		if (password == null) {
-			if (other.password != null)
-				return false;
-		} else if (!password.equals(other.password))
-			return false;
-		if (userId == null) {
-			if (other.userId != null)
-				return false;
-		} else if (!userId.equals(other.userId))
-			return false;
-		return true;
+	public void setRole(RolesEnum role) {
+		this.role = role;
 	}
 }

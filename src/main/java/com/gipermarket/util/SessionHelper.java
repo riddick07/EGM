@@ -4,11 +4,14 @@ import java.util.logging.Logger;
 
 import javax.servlet.http.HttpSession;
 
+import com.gipermarket.dao.enums.RolesEnum;
 import com.gipermarket.domain.UserSession;
 
 public class SessionHelper {
+	
 	private static final Logger log = Logger.getLogger(SessionHelper.class.getName());
 	public static final String USER_SESSION_ATTRIBUTE_NAME = "user.session";
+	
 	private HttpSession session;
 
 	public SessionHelper(HttpSession session) {
@@ -16,7 +19,6 @@ public class SessionHelper {
 		if (session == null) {
 			log.warning("HTTP session is null");
 		}
-
 	}
 
 	/**
@@ -25,14 +27,14 @@ public class SessionHelper {
 	 * @param password
 	 * @param url
 	 */
-	public void create(String userName, String password) {
+	public void create(String userName, String password, RolesEnum role) {
 		if (session == null) {
 			String msg = MessageUtil.getMessage("message.sessionNotCreated");
 			log.severe("HTTP session isn't created");
 			throw new IllegalStateException(msg);
 		}
 
-		UserSession us = new UserSession(userName, password);
+		UserSession us = new UserSession(userName, password, role);
 		session.setAttribute(USER_SESSION_ATTRIBUTE_NAME, us);
 	}
 

@@ -55,7 +55,7 @@ public class LoginController extends AbstractController {
 				ValidationDto dto = securityService.validateCredentials(requestUsername, requestPassword);
 				boolean valid = dto.getIsValid();
 				if (valid) {
-					sessionHelper.create(requestUsername, requestPassword);
+					sessionHelper.create(requestUsername, requestPassword, dto.getRole());
 					return Dispatcher.redirectHomePage();
 				} else {
 					sessionHelper.destroy();
@@ -63,7 +63,7 @@ public class LoginController extends AbstractController {
 				}
 			}
 		} else {
-			return Dispatcher.homePage();
+			return Dispatcher.homePage(null);
 		}
 		return Dispatcher.loginPage("", null);
 	}

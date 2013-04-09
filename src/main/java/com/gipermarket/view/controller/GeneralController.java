@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
 
+import com.gipermarket.dao.enums.RolesEnum;
 import com.gipermarket.util.Dispatcher;
 import com.gipermarket.util.JsonUtil;
 import com.gipermarket.util.MessageUtil;
@@ -56,9 +57,9 @@ public abstract class GeneralController extends AbstractController {
 	 * @param url
 	 *            , @param password, @param username is set parameters
 	 */
-	protected void setSessionAttributes(HttpSession session, String password, String username) {
+	protected void setSessionAttributes(HttpSession session, String password, String username, RolesEnum role) {
 		assert session != null;
-		new SessionHelper(session).create(username, password);
+		new SessionHelper(session).create(username, password, role);
 	}
 
 	/**

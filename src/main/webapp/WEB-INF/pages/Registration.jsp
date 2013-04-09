@@ -24,7 +24,9 @@
 				return this.replace(/^\s+|\s+$/g, '');
 			};
 		}
-		roleComboBoxInit("${model.roles}");
+		var roles = "${model.roles}";
+		roles = roles.replace("[", "").replace("]", "").split(", ");
+		roleComboBoxInit(roles);
 		$("#regBtn")
 				.click(
 						function() {
@@ -53,10 +55,10 @@
 	function roleComboBoxInit(roles) {
 		var combo = $("#role");
 		var value = combo.val();
-
 		$.each(roles, function() {
-			value += '<option id="' + this + '">' + this + '</option>'
-		})
+			value += '<option id="' + this + '">' + this + '</option>';
+		});
+		combo.innerHTML = value;
 	}
 
 	function validate(form_id, email) {
@@ -77,7 +79,6 @@
 			<div class="navbar navbar-inverse">
 				<div class="navbar-inner">
 					<a class="brand" href="#">E-Gipermarket</a>
-
 					<div class="nav-collapse collapse">
 						<ul class="nav">
 							<li class="active"><a href="${pageContext.request.contextPath}/pages/Login.vw">Home</a></li>
