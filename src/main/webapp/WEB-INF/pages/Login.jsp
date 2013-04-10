@@ -29,7 +29,8 @@
 							};
 						}
 
-						$("#loginBtn").click(
+						$("#loginBtn")
+								.click(
 										function() {
 											if (($("#password").val().trim() == "")
 													&& ($("#login").val()
@@ -69,8 +70,8 @@
 						</ul>
 					</div>
 					<button onclick="redirectOnRegistrationPage();" class="btn btn-info m-top m-left avbar-form pull-right">Regisration</button>
-					<form id="loginForm" class="navbar-form pull-right"
-						action="${pageContext.request.contextPath}/pages/Login.vw" method="post">
+					<form id="loginForm" class="navbar-form pull-right" action="${pageContext.request.contextPath}/pages/Login.vw"
+						method="post">
 						<input id="login" name="login" class="span2" type="text" placeholder="Login">
 						<input id="password" name="password" class="span2" type="password" type="password" placeholder="Password">
 						<button id="loginBtn" class="btn btn-info m-top m-left">Sign&nbspin</button>
@@ -87,10 +88,9 @@
 				<div class="container">
 					<div class="carousel-caption">
 						<h1>Example headline.</h1>
-
 						<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
 							gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-						<a class="btn btn-large btn-primary" href="#">Sign up today</a>
+						<a href="#" class="btn btn-large btn-primary">Sign up today</a>
 					</div>
 				</div>
 			</div>
@@ -123,50 +123,6 @@
 		</div>
 		<a class="left carousel-control" href="#carousel" data-slide="prev">‹</a>
 		<a class="right carousel-control" href="#carousel" data-slide="next">›</a>
-	</div>
-
-	<div class="container marketing">
-		<hr class="featurette-divider">
-		<div class="featurette">
-			<img class="featurette-image pull-right" src="${pageContext.request.contextPath}/images/browser-icon-chrome.png">
-
-			<h2 class="featurette-heading">
-				First featurette headling.
-				<span class="muted">It'll blow your mind.</span>
-			</h2>
-
-			<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-				semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-		</div>
-
-		<hr class="featurette-divider">
-
-		<div class="featurette">
-			<img class="featurette-image pull-left" src="${pageContext.request.contextPath}/images/browser-icon-firefox.png">
-
-			<h2 class="featurette-heading">
-				Oh yeah, it's that good.
-				<span class="muted">See for yourself.</span>
-			</h2>
-
-			<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-				semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-		</div>
-
-		<hr class="featurette-divider">
-		<div class="featurette">
-			<img class="featurette-image pull-right" src="${pageContext.request.contextPath}/images/browser-icon-safari.png">
-
-			<h2 class="featurette-heading">
-				And lastly, this one.
-				<span class="muted">Checkmate.</span>
-			</h2>
-
-			<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-				semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-		</div>
-		<hr class="featurette-divider">
-
 	</div>
 </body>
 
