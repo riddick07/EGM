@@ -12,75 +12,29 @@
 </head>
 <script type="text/javascript">
 	window.onload = function() {
-		if ("${model.message}".trim() != "" && "${model.message}" != null) {
-			showErrorDialog("${model.message}");
-		}
-
-		if ("${model.message}" != "" && ($("#password").val().trim() != "")
-				&& ($("#login").val().trim() != "")) {
-			showErrorDialog("${model.message}");
-		}
-
-		if (typeof String.prototype.trim !== 'function') {
-			String.prototype.trim = function() {
-				return this.replace(/^\s+|\s+$/g, '');
-			};
-		}
+		var adminPanel = new AdminPanel();
+		
 		var roles = "${model.roles}";
 		roles = roles.replace("[", "").replace("]", "").split(", ");
 		roleComboBoxInit(roles);
-		$("#accountFormBtn")
-				.click(
-						function() {
-							if ($("#password").val().trim() == ""
-									&& $("#login").val().trim() == ""
-									&& $("#name").val().trim() == "") {
-								showErrorDialog("Login, User name and password can't be empty!");
-								return false;
-							} else if ($("#login").val().trim() == "") {
-								showErrorDialog("Please enter login!");
-								return false;
-							} else if ($("#password").val().trim() == "") {
-								showErrorDialog("Please enter password!");
-								return false;
-							} else if ($("#name").val().trim() == "") {
-								showErrorDialog("Please enter your name!");
-								return false;
-							}
-							if (validate('accountForm', 'mail')) {
-								$("#accountForm").submit();
-							}
-							return true;
-						});
-	};
-
-	function roleComboBoxInit(roles) {
-		var combo = $("#role");
-		var value = combo.val();
-		$.each(roles, function() {
-			value += '<option id="' + this + '">' + this + '</option>';
-		});
-		combo.innerHTML = value;
-	}
-
-	function validate(form_id, email) {
-		var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-		var address = document.forms[form_id].elements[email].value;
-		if (reg.test(address) == false) {
-			showErrorDialog('Invalid Email Address');
-			return false;
-		} else {
-			return true;
+		
+		function roleComboBoxInit(roles) {
+			var combo = $("#role");
+			var value = combo.val();
+			$.each(roles, function() {
+				value += '<option id="' + this + '">' + this + '</option>';
+			});
+			combo.innerHTML = value;
 		}
-	}
+	};
 </script>
 <body>
 	<div class="container marketing contact">
 		<div class="tabbable">
 			<!-- Only required for left/right tabs -->
 			<ul class="nav nav-tabs">
-				<li id="accountTabLink" class="active"><a href="#tab1" data-toggle="tab">Account settings</a></li>
-				<li id="connectionTabLink"><a href="#tab2" data-toggle="tab">Connection</a></li>
+				<li id="accountTabLink" class="active ap-tab"><a href="#tab1" data-toggle="tab">Account settings</a></li>
+				<li id="connectionTabLink" class="ap-tab"><a href="#tab2" data-toggle="tab">Connection</a></li>
 			</ul>
 			<div class="tab-content">
 				<div class="tab-pane active" id="tab1">
@@ -92,8 +46,8 @@
 			</div>
 		</div>
 	</div>
-	<div id="accountTab">
-		<div class="m-top offset6">
+	<div id="accountTab" class="admin-panel">
+		<div class="m-top offset6 pagination-centered">
 			<form id="accountForm" class="m-top" action="${pageContext.request.contextPath}/pages/AdminPanel.vw" method="post">
 				<input id="formType" class="m-top reg hidden">
 				<input id="login" name="login" class="m-top reg" placeholder="Username" type="text">
@@ -111,7 +65,7 @@
 		</div>
 	</div>
 
-	<div id="connectionTab">
+	<div id="connectionTab" class="admin-panel hidden">
 		<div class="m-top  pagination-centered offset6">
 			<form id="connectionForm" class="m-top" action="${pageContext.request.contextPath}/pages/AdminPanel.vw" method="post">
 				<input id="loginToSite" name="loginToSite" class="m-top reg" placeholder="Login to ypur site" type="text">
@@ -127,17 +81,17 @@
 	</div>
 	<jsp:include page="/WEB-INF/pages/includes/footer.jsp" />
 </body>
-<style id="holderjs-style" type="text/css">
+<style type="text/css">
 select input.reg {
 	margin-top: 15px;
 	padding-left: 0;
 	padding-right: 0;
-	width: 400px;
+	width: 290px;
 	padding-left: 0;
 }
 
 div.pagination-centered {
-	width: 500px;
+	width: 260px;
 }
 </style>
 </html>

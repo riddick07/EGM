@@ -2,22 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aee39ff-3897-4ea4-8de7-caceff6cdda4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/EGipermarket.war" afterPath="$PROJECT_DIR$/target/EGipermarket.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gipermarket/dao/impl/CredentialsDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/gipermarket/dao/impl/CredentialsDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gipermarket/services/impl/CredentialsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/gipermarket/services/impl/CredentialsServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gipermarket/util/Dispatcher.java" afterPath="$PROJECT_DIR$/src/main/java/com/gipermarket/util/Dispatcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gipermarket/view/controller/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/gipermarket/view/controller/HomeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gipermarket/dao/api/ICredentialsDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/gipermarket/dao/api/ICredentialsDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gipermarket/view/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/gipermarket/view/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gipermarket/view/controller/enums/PageParametersEnum.java" afterPath="$PROJECT_DIR$/src/main/java/com/gipermarket/view/controller/enums/PageParametersEnum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Registration.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Registration.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gipermarket/view/controller/RegistrationController.java" afterPath="$PROJECT_DIR$/src/main/java/com/gipermarket/view/controller/RegistrationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/rest-config.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/rest-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/standup.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/standupPageTableModel.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/js/estimation.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/admin_panel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/AdminPanel.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/AdminPanel.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/includes/jslib.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/includes/jslib.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="EGipermarket.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="8aee39ff-3897-4ea4-8de7-caceff6cdda4" time="1365410870199" ignored="false" />
+    <file path="/Dummy.txt" changelist="8aee39ff-3897-4ea4-8de7-caceff6cdda4" time="1366030050584" ignored="false" />
     <file path="$USER_HOME$/programming/project/KloodEngine/.idea/workspace.xml" changelist="8aee39ff-3897-4ea4-8de7-caceff6cdda4" time="1365068163789" ignored="false" />
     <file path="/Login.jsp" changelist="8aee39ff-3897-4ea4-8de7-caceff6cdda4" time="1365082818128" ignored="false" />
     <file path="/fragment.java" changelist="8aee39ff-3897-4ea4-8de7-caceff6cdda4" time="1365068491543" ignored="false" />
@@ -44,6 +38,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -78,7 +73,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -91,7 +85,7 @@
       <file leaf-file-name="RegistrationController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gipermarket/view/controller/RegistrationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="42" selection-start="1838" selection-end="1838" vertical-scroll-proportion="0.0">
+            <state line="43" column="42" selection-start="1859" selection-end="1859" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -109,7 +103,7 @@
       <file leaf-file-name="CredentialsServiceImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gipermarket/services/impl/CredentialsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="23" selection-start="1665" selection-end="1665" vertical-scroll-proportion="0.0">
+            <state line="50" column="23" selection-start="1541" selection-end="1541" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -119,11 +113,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gipermarket/dao/impl/CredentialsDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="137" column="3" selection-start="3686" selection-end="3686" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#693#723#0" expanded="true" />
-                <element signature="e#1602#1632#0" expanded="true" />
-                <element signature="e#3388#3396#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -131,7 +121,7 @@
       <file leaf-file-name="AdminPanel.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/AdminPanel.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="56" selection-start="750" selection-end="750" vertical-scroll-proportion="-17.5">
+            <state line="96" column="7" selection-start="3713" selection-end="3713" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -140,7 +130,7 @@
       <file leaf-file-name="header.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/includes/header.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="96" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.66502464">
+            <state line="17" column="96" selection-start="827" selection-end="827" vertical-scroll-proportion="0.41530946">
               <folding />
             </state>
           </provider>
@@ -149,13 +139,8 @@
       <file leaf-file-name="Dispatcher.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gipermarket/util/Dispatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="61" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#676#692#0" expanded="false" />
-                <marker date="1365425989923" expanded="true" signature="1235:1321" placeholder="{...}" />
-                <marker date="1365425989923" expanded="true" signature="1165:1181" placeholder="&lt;~&gt;" />
-              </folding>
+            <state line="49" column="61" selection-start="1650" selection-end="1650" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -172,7 +157,7 @@
       <file leaf-file-name="Registration.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Registration.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="47" selection-start="976" selection-end="976" vertical-scroll-proportion="-16.25">
+            <state line="28" column="47" selection-start="1060" selection-end="1060" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -259,8 +244,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1920" />
-    <option name="height" value="1165" />
+    <option name="x" value="-2" />
+    <option name="y" value="-3" />
+    <option name="width" value="1924" />
+    <option name="height" value="1172" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -290,7 +277,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -539,51 +526,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EGipermarket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EGipermarket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Project" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="223" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="232" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="232" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="223" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="238" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1147" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1147" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1147" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="238" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="232" />
     <property name="GoToClass.includeJavaFiles" value="false" />
@@ -603,8 +564,8 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Tomcat Server.index.jsp">
     <configuration default="false" name="All in EGipermarket" type="JUnit" factoryName="JUnit" temporary="true">
@@ -742,6 +703,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -768,19 +742,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -944,7 +905,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1165" extended-state="6" />
+    <frame x="-2" y="-3" width="1924" height="1172" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32940018" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -963,8 +924,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973261" sideWeight="0.21927238" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20160428" sideWeight="0.6705998" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32940018" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24973261" sideWeight="0.6705998" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32910156" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24919957" sideWeight="0.67089844" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32940018" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1043,16 +1004,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gipermarket/services/api/IRegistrationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="32" selection-start="280" selection-end="280" vertical-scroll-proportion="0.2519084">
-          <folding />
-        </state>
+        <state line="12" column="32" selection-start="280" selection-end="280" vertical-scroll-proportion="0.2519084" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gipermarket/dao/bean/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="67" selection-start="1737" selection-end="1772" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="80" column="67" selection-start="1737" selection-end="1772" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gipermarket/services/impl/RegistrationServiceImpl.java">
@@ -1062,49 +1019,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Registration.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="47" selection-start="976" selection-end="976" vertical-scroll-proportion="-16.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gipermarket/view/controller/enums/PageParametersEnum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="128" selection-start="269" selection-end="269" vertical-scroll-proportion="0.121212125">
-          <folding />
-        </state>
+        <state line="8" column="128" selection-start="269" selection-end="269" vertical-scroll-proportion="0.121212125" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gipermarket/util/Dispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="61" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#676#692#0" expanded="false" />
-            <marker date="1365425989923" expanded="true" signature="1235:1321" placeholder="{...}" />
-            <marker date="1365425989923" expanded="true" signature="1165:1181" placeholder="&lt;~&gt;" />
-          </folding>
+        <state line="49" column="61" selection-start="1650" selection-end="1650" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gipermarket/services/api/ICredentialsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="47" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="9" column="47" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gipermarket/dao/bean/Credentials.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="351" selection-end="351" vertical-scroll-proportion="0.13740458">
-          <folding />
-        </state>
+        <state line="13" column="13" selection-start="351" selection-end="351" vertical-scroll-proportion="0.13740458" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gipermarket/view/controller/RegistrationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="42" selection-start="1838" selection-end="1838" vertical-scroll-proportion="0.0">
+        <state line="43" column="42" selection-start="1859" selection-end="1859" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1118,7 +1057,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gipermarket/services/impl/CredentialsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="23" selection-start="1665" selection-end="1665" vertical-scroll-proportion="0.0">
+        <state line="50" column="23" selection-start="1541" selection-end="1541" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1133,24 +1072,27 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gipermarket/dao/impl/CredentialsDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="137" column="3" selection-start="3686" selection-end="3686" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#693#723#0" expanded="true" />
-            <element signature="e#1602#1632#0" expanded="true" />
-            <element signature="e#3388#3396#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/AdminPanel.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="56" selection-start="750" selection-end="750" vertical-scroll-proportion="-17.5">
+        <state line="96" column="7" selection-start="3713" selection-end="3713" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/includes/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="96" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.66502464">
+        <state line="17" column="96" selection-start="827" selection-end="827" vertical-scroll-proportion="0.41530946">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Registration.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="47" selection-start="1060" selection-end="1060" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
