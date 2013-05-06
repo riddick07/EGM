@@ -12,6 +12,11 @@
 			<name>Project Repo</name>
 			<url>file://${project.basedir}/libs</url>
 		</repository>
+		<repository>
+			<id>thirdparty-releases</id>
+			<name>JBoss Thirdparty Releases</name>
+			<url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases</url>
+		</repository>
 	</repositories>
 
 	<build>
@@ -176,6 +181,16 @@
 			<artifactId>spring-web</artifactId>
 			<version>3.1.0.RELEASE</version>
 		</dependency>
-
+		<dependency>
+			<groupId>redstone.xmlrpc</groupId>
+			<artifactId>xmlrpc</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-build-plugin</artifactId>
+			<version>1.4</version>
+			<type>maven-plugin</type>
+		</dependency>
 	</dependencies>
 </project>
