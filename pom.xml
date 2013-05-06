@@ -6,6 +6,14 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
+	<repositories>
+		<repository>
+			<id>project_repository</id>
+			<name>Project Repo</name>
+			<url>file://${project.basedir}/libs</url>
+		</repository>
+	</repositories>
+
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<resources>
@@ -33,8 +41,7 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-war-plugin</artifactId>
 					<version>2.1.1</version>
-					<!-- <configuration> section added to pick up the WEB-INF/web.xml inside 
-						webapp -->
+					<!-- <configuration> section added to pick up the WEB-INF/web.xml inside webapp -->
 					<configuration>
 						<webResources>
 							<resource>
@@ -52,11 +59,6 @@
 			<groupId>org.apache.xmlbeans</groupId>
 			<artifactId>xmlbeans</artifactId>
 			<version>2.5.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-ooxml</artifactId>
-			<version>3.8</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -145,9 +147,35 @@
 			<version>1.2.0.Final</version>
 		</dependency>
 		<dependency>
-			<groupId>sk.seges.acris</groupId>
-			<artifactId>acris-bpm-activiti-engine</artifactId>
-			<version>1.2.2</version>
+			<groupId>wordpress</groupId>
+			<artifactId>jwordpress</artifactId>
+			<version>0.5.1</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>3.1.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>3.1.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>3.1.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>3.1.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>3.1.0.RELEASE</version>
+		</dependency>
+
 	</dependencies>
 </project>
