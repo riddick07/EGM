@@ -1,17 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>EGipermarket</groupId>
-	<artifactId>EGipermarket</artifactId>
+	<groupId>com.gipermarket</groupId>
+	<artifactId>com.gipermarket.parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>pom</packaging>
 
 	<repositories>
-		<repository>
-			<id>project_repository</id>
-			<name>Project Repo</name>
-			<url>file://${project.basedir}/libs</url>
-		</repository>
 		<repository>
 			<id>thirdparty-releases</id>
 			<name>JBoss Thirdparty Releases</name>
@@ -150,11 +145,6 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-jpamodelgen</artifactId>
 			<version>1.2.0.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>wordpress</groupId>
-			<artifactId>jwordpress</artifactId>
-			<version>0.5.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>

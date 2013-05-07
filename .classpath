@@ -22,5 +22,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="libs"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/jwordpress"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
