@@ -45,7 +45,7 @@ public class PosterImpl implements IPoster {
 			System.out.println(pageDefinition.getPage_title());
 		}
 		System.out.println("Posting a test (draft) page from a previous page...");
-		Page recentPost = wp.getRecentPosts(1).get(0);
+		Page recentPost = wp.getRecentPosts(10).get(0);
 		recentPost.setTitle("Test Page");
 		recentPost.setDescription("Test description");
 		String result = wp.newPost(recentPost, false);
